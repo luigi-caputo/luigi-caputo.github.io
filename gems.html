@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>LC Homepage</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+
+	<div class="nav-link-wrapper">
+          <a href="index.html">Home</a>
+        </div>
+	
+	<div class="nav-link-wrapper">
+          <a href="index.html">Plants</a>
+        </div>
+	
+	<div class="nav-link-wrapper active-nav-link">
+		  <div class="dropdown">
+			<a class="dropbtn">Minerals & Rocks</a>
+			<div class="dropdown-content">
+				<a href="mineralsrocks.html">Raw minerals</a>
+				<a href="gems.html">Cut stones</a>
+			</div>
+		  </div>
+        </div>
+	
+	<div class="nav-link-wrapper">
+          <a href="fossils.html">Fossils</a>
+        </div>
+
+	<div class="nav-link-wrapper">
+          <a href="index.html">Molecules</a>
+        </div>	
+
+	<div class="nav-link-wrapper">
+          <a href="index.html">Miscellanea</a>
+        </div>
+	
+        <div class="nav-link-wrapper">
+          <a href="about.html">About</a>
+        </div>
+
+	<div class="nav-link-wrapper">
+          <a href="about.html">Contacts</a>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          Luigi Caputo
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/amethyst_Brazil.jpg)"></div>
+
+          <div class="img-text-wrapper">
+	    <a href="#" style="text-decoration:none;">
+            	<div class="subtitle">Amethyst <br/> Brazil</div>
+	    </a>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/ekanite_Sri%20Lanka.jpg)"></div>
+          <div class="img-text-wrapper">
+            
+            <div class="subtitle">Ekanite <br/> Ratnapura, Sri Lanka</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/peridote.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Peridote</div>
+          </div>
+        </div>
+
+        <div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/polishes_malachite.jpg)"></div>
+          <div class="img-text-wrapper">
+            
+            <div class="subtitle">Malachite</div>
+          </div>
+        </div>
+
+	<div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/Sapphire_Mogok%20Burma%20Myanmar.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Sapphire <br/> Burma, Myanmar</div>
+          </div>
+        </div>
+
+
+	<div class="portfolio-item-wrapper">
+          <div class="portfolio-img-background" style="background-image:url(images/gemstones/sphalerite.jpg)"></div>
+          <div class="img-text-wrapper">
+
+            <div class="subtitle">Sphalerite</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+  const portfolioItemstest = document.querySelectorAll('.portfolio-item-wrappertest');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+/*
+  portfolioItemstest.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+    
+    portfolioItem.addEventListener('click', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      window.open("about.html");
+      window.close();
+    });
+  });
+*/
+</script>
+
+</html>
